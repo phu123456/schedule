@@ -6,6 +6,7 @@
     <%= text_field_tag :search, params[:search], id: "search-bar" %>
     <%= submit_tag("Search")%>
   <% end %>
+
 <table>
   <thead>
     <tr>
@@ -20,10 +21,11 @@
   <tbody>
     <% @pois.each do |poi| %>
       <tr>
-        <td><%= poi.subj %></td>
+        <td class="poi-subj" value="<%= poi.subj %>"><%= poi.subj %></td>
         <td><%= poi.instruc %></td>
         <td><%= poi.tm %></td>
         <td><%= poi.rm %></td>
+        <td><button type="button" class="btn btn-default add">Add</button></td>
         <td><%= link_to 'Show', poi %></td>
         <td><%= link_to 'Edit', edit_poi_path(poi) %></td>
         <td><%= link_to 'Destroy', poi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
