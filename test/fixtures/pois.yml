@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: pois
+#
+#  id         :integer          not null, primary key
+#  subj       :text
+#  instruc    :text
+#  tm         :text
+#  rm         :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subj: MyText
+  instruc: MyText
+  tm: MyText
+  rm: MyText
+
+two:
+  subj: MyText
+  instruc: MyText
+  tm: MyText
+  rm: MyText
