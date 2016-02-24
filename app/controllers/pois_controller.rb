@@ -17,7 +17,7 @@ class PoisController < ApplicationController
   # GET /pois
   # GET /pois.json
   def index
-    @pois = Poi.all
+    @pois = Poi.search(params[:search])
   end
 
   # GET /pois/1

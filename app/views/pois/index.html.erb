@@ -2,6 +2,10 @@
 
 <h1>Listing Pois</h1>
 
+  <%= form_tag pois_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search], id: "search-bar" %>
+    <%= submit_tag("Search")%>
+  <% end %>
 <table>
   <thead>
     <tr>
