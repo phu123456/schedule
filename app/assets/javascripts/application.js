@@ -32,11 +32,171 @@
 
 $('.add').click(function() {
   var course_name = $('.poi-subj').map(function(i,x){return $(x).text()})[0];
-  console.log(course_name)
-  // if (course_name == "Internet Programmin") {
-  $('.slot1').append(course_name)
-  // }
-  // console.log($('.poi-subj').map(function(i,x){return $(x).text()})[0]);
+  var class_time = $('.poi-time').map(function(i,x){return $(x).text()})[0];
+
+  var i
+  for (i = 0; i < class_time.length; i++) {
+    if (class_time[i] == "(")
+      var date = class_time[i+1] + class_time[i+2] + class_time[i+3]
+      var time = class_time[i+5] + class_time[i+6]
+
+      if (date == "Mon") {
+          if (time == "08") {
+            $('.slot1').append(course_name)
+            $('.slot7').append(course_name)
+          }
+          if (time == "10") {
+            $('.slot13').append(course_name)
+            $('.slot19').append(course_name)
+          }
+          if (time == "12") {
+            $('.slot25').append(course_name)
+            $('.slot31').append(course_name)
+          }
+          if (time == "14") {
+            $('.slot37').append(course_name)
+            $('.slot43').append(course_name)
+          }
+          if (time == "16") {
+            $('.slot49').append(course_name)
+            $('.slot55').append(course_name)
+          }
+          if (time == "18") {
+            $('.slot61').append(course_name)
+            $('.slot67').append(course_name)
+          }
+      }
+      else if (date == "Tue") {
+          if (time == "08") {
+            $('.slot2').append(course_name)
+            $('.slot8').append(course_name)
+          }
+          if (time == "10") {
+            $('.slot14').append(course_name)
+            $('.slot20').append(course_name)
+          }
+          if (time == "12") {
+            $('.slot26').append(course_name)
+            $('.slot32').append(course_name)
+          }
+          if (time == "14") {
+            $('.slot38').append(course_name)
+            $('.slot44').append(course_name)
+          }
+          if (time == "16") {
+            $('.slot50').append(course_name)
+            $('.slot56').append(course_name)
+          }
+          if (time == "18") {
+            $('.slot62').append(course_name)
+            $('.slot68').append(course_name)
+          }
+      }
+      else if (date == "Wed") {
+          if (time == "08") {
+            $('.slot3').append(course_name)
+            $('.slot9').append(course_name)
+          }
+          if (time == "10") {
+            $('.slot15').append(course_name)
+            $('.slot21').append(course_name)
+          }
+          if (time == "12") {
+            $('.slot27').append(course_name)
+            $('.slot33').append(course_name)
+          }
+          if (time == "14") {
+            $('.slot39').append(course_name)
+            $('.slot45').append(course_name)
+          }
+          if (time == "16") {
+            $('.slot51').append(course_name)
+            $('.slot57').append(course_name)
+          }
+          if (time == "18") {
+            $('.slot63').append(course_name)
+            $('.slot69').append(course_name)
+          }
+      }
+      else if (date == "Thu") {
+          if (time == "08") {
+            $('.slot4').append(course_name)
+            $('.slot10').append(course_name)
+          }
+          if (time == "10") {
+            $('.slot16').append(course_name)
+            $('.slot22').append(course_name)
+          }
+          if (time == "12") {
+            $('.slot29').append(course_name)
+            $('.slot34').append(course_name)
+          }
+          if (time == "14") {
+            $('.slot40').append(course_name)
+            $('.slot46').append(course_name)
+          }
+          if (time == "16") {
+            $('.slot52').append(course_name)
+            $('.slot53').append(course_name)
+          }
+          if (time == "18") {
+            $('.slot64').append(course_name)
+            $('.slot70').append(course_name)
+          }
+      }
+      else if (date == "Fri") {
+          if (time == "08") {
+            $('.slot5').append(course_name)
+            $('.slot11').append(course_name)
+          }
+          if (time == "10") {
+            $('.slot17').append(course_name)
+            $('.slot23').append(course_name)
+          }
+          if (time == "12") {
+            $('.slot30').append(course_name)
+            $('.slot35').append(course_name)
+          }
+          if (time == "14") {
+            $('.slot41').append(course_name)
+            $('.slot47').append(course_name)
+          }
+          if (time == "16") {
+            $('.slot53').append(course_name)
+            $('.slot59').append(course_name)
+          }
+          if (time == "18") {
+            $('.slot65').append(course_name)
+            $('.slot71').append(course_name)
+          }
+      }
+      else if (date == "Sat") {
+          if (time == "08") {
+            $('.slot6').append(course_name)
+            $('.slot12').append(course_name)
+          }
+          if (time == "10") {
+            $('.slot18').append(course_name)
+            $('.slot24').append(course_name)
+          }
+          if (time == "12") {
+            $('.slot31').append(course_name)
+            $('.slot36').append(course_name)
+          }
+          if (time == "14") {
+            $('.slot42').append(course_name)
+            $('.slot48').append(course_name)
+          }
+          if (time == "16") {
+            $('.slot54').append(course_name)
+            $('.slot60').append(course_name)
+          }
+          if (time == "18") {
+            $('.slot66').append(course_name)
+            $('.slot72').append(course_name)
+          }
+      }
+  }
 })
 
 function update(jscolor) {

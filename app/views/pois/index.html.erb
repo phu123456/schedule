@@ -18,7 +18,7 @@
   <tr>
     <td></td>
     <th>Mon</th>
-    <th>Tu</th>
+    <th>Tue</th>
     <th>Wed</th>
     <th>Thu</th>
     <th>Fri</th>
@@ -176,9 +176,9 @@
             <tbody>
               <% @pois.each do |poi| %>
                 <tr>
-                  <td class="poi-subj" value="<%= poi.subj %>"><%= poi.subj %></td>
+                  <td class="poi-subj" value="<%= poi.subj %>"> <%= poi.subj %> </td>
                   <td><%= poi.instruc %></td>
-                  <td><%= poi.tm %></td>
+                  <td class="poi-time" value="<%= poi.tm%>"> <%= poi.tm %> </td>
                   <td><%= poi.rm %></td>
                   <td><button type="button" class="btn btn-default add">Add</button></td>
                   <td><%= link_to 'Show', poi %></td>
