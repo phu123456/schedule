@@ -33,7 +33,6 @@
 $('.add').click(function() {
   var course_name = $('.poi-subj').map(function(i,x){return $(x).text()})[0];
   var class_time = $('.poi-time').map(function(i,x){return $(x).text()})[0];
-
   var i
   for (i = 0; i < class_time.length; i++) {
     if (class_time[i] == "(")
