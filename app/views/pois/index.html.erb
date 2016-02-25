@@ -1,6 +1,8 @@
+
+<%= render 'pois/head'%>
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pois</h1>
+
 
 
 <br>
@@ -10,151 +12,49 @@
     $("#tableone").css('background-color', '#' + jscolor);
   }
 </script>
-<input class="jscolor {onFineChange:'update(this)'}" value="FFFFFF">
+
+
 
 <!-- <table style="width:700px; height:300px;" id="tableone"> -->
-
-<table id="tableone" align="center" class="arrange" border="1">
-  <tr>
-    <td></td>
-    <th>Mon</th>
-    <th>Tue</th>
-    <th>Wed</th>
-    <th>Thu</th>
-    <th>Fri</th>
-    <th>Sat</th>
-  </tr>
-
-  <tr height="30" id="8am">
-    <td>8:00</td>
-    <td class="slot1"></td>
-    <td class="slot2"></td>
-    <td class="slot3"></td>
-    <td class="slot4"></td>
-    <td class="slot5"></td>
-    <td class="slot6"></td>
-  </tr>
-  <tr height="30">
-    <td>9:00</td>
-    <td class="slot7"></td>
-    <td class="slot8"></td>
-    <td class="slot9"></td>
-    <td class="slot10"></td>
-    <td class="slot11"></td>
-    <td class="slot12"></td>
-  </tr>
-  <tr height="30">
-    <td>10:00</td>
-    <td class="slot13"></td>
-    <td class="slot14"></td>
-    <td class="slot15"></td>
-    <td class="slot16"></td>
-    <td class="slot17"></td>
-    <td class="slot18"></td>
-  </tr>
-  <tr height="30">
-    <td>11:00</td>
-    <td class="slot19"></td>
-    <td class="slot20"></td>
-    <td class="slot21"></td>
-    <td class="slot22"></td>
-    <td class="slot23"></td>
-    <td class="slot24"></td>
-  </tr>
-  <tr height="30">
-    <td>12:00</td>
-    <td class="slot25"></td>
-    <td class="slot26"></td>
-    <td class="slot27"></td>
-    <td class="slot28"></td>
-    <td class="slot29"></td>
-    <td class="slot30"></td>
-  </tr>
-  <tr height="30">
-    <td>13:00</td>
-    <td class="slot31"></td>
-    <td class="slot32"></td>
-    <td class="slot33"></td>
-    <td class="slot34"></td>
-    <td class="slot35"></td>
-    <td class="slot36"></td>
-  </tr>
-  <tr height="30">
-    <td>14:00</td>
-    <td class="slot37"></td>
-    <td class="slot38"></td>
-    <td class="slot39"></td>
-    <td class="slot40"></td>
-    <td class="slot41"></td>
-    <td class="slot42"></td>
-  </tr>
-  <tr height="30">
-    <td>15:00</td>
-    <td class="slot43"></td>
-    <td class="slot44"></td>
-    <td class="slot45"></td>
-    <td class="slot46"></td>
-    <td class="slot47"></td>
-    <td class="slot48"></td>
-  </tr>
-  <tr height="30">
-    <td>16:00</td>
-    <td class="slot49"></td>
-    <td class="slot50"></td>
-    <td class="slot51"></td>
-    <td class="slot52"></td>
-    <td class="slot53"></td>
-    <td class="slot54"></td>
-  </tr>
-  <tr height="30">
-    <td>17:00</td>
-    <td class="slot55"></td>
-    <td class="slot56"></td>
-    <td class="slot57"></td>
-    <td class="slot58"></td>
-    <td class="slot59"></td>
-    <td class="slot60"></td>
-  </tr>
-  <tr height="30">
-    <td>18:00</td>
-    <td class="slot61"></td>
-    <td class="slot62"></td>
-    <td class="slot63"></td>
-    <td class="slot64"></td>
-    <td class="slot65"></td>
-    <td class="slot66"></td>
-  </tr>
-  <tr height="30">
-    <td>19:00</td>
-    <td class="slot67"></td>
-    <td class="slot68"></td>
-    <td class="slot69"></td>
-    <td class="slot70"></td>
-    <td class="slot71"></td>
-    <td class="slot73"></td>
-  </tr>
-  <tr height="30">
-    <td>20:00</td>
-    <td class="slot73"></td>
-    <td class="slot74"></td>
-    <td class="slot75"></td>
-    <td class="slot76"></td>
-    <td class="slot77"></td>
-    <td class="slot78"></td>
-  </tr>
-
-</table>
-
-<div class="container">
+<!-- <div class="row">
+  <div class="col-md-8 col-md-offset-2 center"> -->
+<%= render 'pois/table'%>
+<!-- </div>
+</div> -->
+<br><br>
+<div class="container center">
   <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Course</button>
+
+
+
+
+  <div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default btn-primary" data-toggle="modal" data-target="#myModal">Add Course</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="jscolor {onFineChange:'update(this)'} btn btn-default"></button>
+  </div>
+  <!-- <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Right</button>
+  </div> -->
+</div>
+
+
+
+
+
+
+
+  <!-- <input class="jscolor {onFineChange:'update(this)'} btn btn-primary btn-lg"></input>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Course</button> -->
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">Search</h4>
         </div>
         <div class="modal-body">
           <!-- <p>This is a large modal.</p> -->
