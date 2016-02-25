@@ -14,7 +14,7 @@
 
 <!-- <table style="width:700px; height:300px;" id="tableone"> -->
 
-<table id="tableone" class="arrange" border="1">
+<table id="tableone" align="center" class="arrange" border="1">
   <tr>
     <td></td>
     <th>Mon</th>
@@ -162,32 +162,38 @@
             <%= text_field_tag :search, params[:search], id: "search-bar" %>
             <%= submit_tag("Search")%>
           <% end %>
-          <table>
-            <thead>
-              <tr>
-                <th>Subject</th>
-                <th>Instructor</th>
-                <th>Time</th>
-                <th>Room</th>
-                <th colspan="3"></th>
-              </tr>
-            </thead>
 
-            <tbody>
-              <% @pois.each do |poi| %>
+          <div class="panel panel-default">
+          <!-- Default panel contents -->
+            <div class="panel-heading">Panel heading</div>
+          <!-- Table -->
+            <table class="table">
+              <thead>
                 <tr>
-                  <td class="poi-subj" value="<%= poi.subj %>"> <%= poi.subj %> </td>
-                  <td><%= poi.instruc %></td>
-                  <td class="poi-time" value="<%= poi.tm%>"> <%= poi.tm %> </td>
-                  <td><%= poi.rm %></td>
-                  <td><button type="button" class="btn btn-default add">Add</button></td>
-                  <td><%= link_to 'Show', poi %></td>
-                  <td><%= link_to 'Edit', edit_poi_path(poi) %></td>
-                  <td><%= link_to 'Destroy', poi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <th>Subject</th>
+                  <th>Instructor</th>
+                  <th>Time</th>
+                  <th>Room</th>
+                  <th colspan="3"></th>
                 </tr>
-              <% end %>
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody>
+                <% @pois.each do |poi| %>
+                  <tr>
+                    <td class="poi-subj" value="<%= poi.subj %>"> <%= poi.subj %> </td>
+                    <td><%= poi.instruc %></td>
+                    <td class="poi-time" value="<%= poi.tm%>"> <%= poi.tm %> </td>
+                    <td><%= poi.rm %></td>
+                    <td><button type="button" class="btn btn-default add" data-dismiss="modal">Add</button></td>
+                    <!-- <td><%= link_to 'Show', poi %></td>
+                    <td><%= link_to 'Edit', edit_poi_path(poi) %></td>
+                    <td><%= link_to 'Destroy', poi, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -196,5 +202,3 @@
     </div>
   </div>
 </div>
-
-<%= link_to 'New Poi', new_poi_path %>
